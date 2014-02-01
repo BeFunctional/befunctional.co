@@ -55,8 +55,10 @@
 $color-purple: rgb(36,24,36);
 $color-black: rgb(10,10,10);
 $color-neutral-light: rgb(240,240,240);
+$color-fg-blue: rgb(16,92,116);
 
 // Fonts
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes|Pinyon+Script);
 $font-stack: Arial, Helvetica, sans-serif;
 
 // Math
@@ -108,13 +110,15 @@ $browser-context: 16;
 // Body
 body { 
 	background-color: $color-purple;
+	font-size: 16px;
 }
 
 // Typography
 
 // Content-Bounding
 .sheet-sitewide {
-	max-width: em(1280);
+	max-width: 1000px;
+	width: 100%;
 	margin: 0 auto;
 	@include box-shadow(0, 0, 1em, $color-black);
 }
@@ -136,9 +140,40 @@ body {
 	background-image: url('../img/hero/banner1.jpg');
 	background-position: center;
 	background-size: cover;
-	min-height: 30em;
+	padding: 2.5em 0;
 	color: #fff;
+	text-align: center;
 	margin-bottom: 0;
+	h1 { 
+		font-family: 'Great Vibes', serif;
+		font-size: 10em;
+		text-shadow: 0 0 0.02em lighten($color-black, 50%);
+	}
+	.fg-desc { 
+		margin-top: 1.5em;
+		background-color: $color-fg-blue;
+		@include box-shadow(0, 0, 0.25em, $color-black);
+	}
+	.cta-text { 
+		font-weight: bold;
+		letter-spacing: 0.05em;
+		text-shadow: 0 0 0.02em lighten($color-black, 50%);
+	}
+}
+@media (max-width: em(768)) {
+	.jumbotron { 
+		padding-top: 1em;
+		padding-bottom: 1em;
+		.fg-desc, .cta-text { padding: 0.25em 1em; }
+		.row { 
+			margin-left: 1em;
+			margin-right: 1em;
+		 } 
+	}
+}
+@media (max-width: em(400)) {
+	.jumbotron h1 {
+	}
 }
 
 
