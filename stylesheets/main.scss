@@ -59,7 +59,8 @@ $color-fg-blue: rgb(16,92,116);
 
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Great+Vibes|Pinyon+Script);
-$font-stack: Arial, Helvetica, sans-serif;
+$font-stack: Georgia, serif;
+$font-stack-fancyshit: 'Great Vibes', Georgia, serif;
 
 // Math
 $browser-context: 16;
@@ -94,6 +95,13 @@ $browser-context: 16;
   }
 }
 
+// Gradient
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
 
 
 
@@ -110,10 +118,15 @@ $browser-context: 16;
 // Body
 body { 
 	background-color: $color-purple;
+	@include gradient($color-purple, lighten($color-purple, 10%));
 	font-size: 16px;
+	font-family: $font-stack;
 }
 
 // Typography
+h1, h2, h3 { font-family: $font-stack-fancyshit; }
+h1 { font-size: 3.25em; }
+.title { margin-bottom: 0.5em; }
 
 // Content-Bounding
 .sheet-sitewide {
@@ -192,8 +205,37 @@ body {
 // Container Styles
 .contentwrap-main { 
 	background-color: $color-neutral-light;
+}
+
+
+
+
+
+/*
+ * -------------------------------------------
+ *	$_SECTION STYLES
+ *  
+ *  These are global SASS styles used
+ *  throughout the entire stylesheet.
+ * -------------------------------------------
+ */
+
+// About
+.origin-future { padding: 0em 4em; }
+.content-about {
+	background-color: #222222; // Old browsers
+	@include gradient(#222222, #081527);
+	color: $color-neutral-light;
 	padding-top: 2em;
 	padding-bottom: 2em;
+	hr { 
+		margin: 3em auto;
+		border-color: darken($color-neutral-light, 32%);
+		width: 32%;
+	}
+	.about-conclusion { 
+		font-size: 2.75em;
+	}
 }
 
 
