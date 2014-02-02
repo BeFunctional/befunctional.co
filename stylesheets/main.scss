@@ -118,14 +118,14 @@ $browser-context: 16;
 // Body
 body { 
 	background-color: $color-purple;
-	@include gradient($color-purple, lighten($color-purple, 10%));
+	@include gradient($color-purple, lighten($color-purple, 5%));
 	font-size: 16px;
 	font-family: $font-stack;
 }
 
 // Typography
 h1, h2, h3 { font-family: $font-stack-fancyshit; }
-h1 { font-size: 3.25em; }
+h1 { font-size: 4em; }
 .title { margin-bottom: 0.5em; }
 
 // Content-Bounding
