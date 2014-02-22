@@ -35,13 +35,10 @@
         <div class="row">
           <div class="col-xs-12 col-sm-offset-3 col-sm-6">
             <div class="input-group">
-              
-              <div class="message"></div>
- 
-              <form  role="form" method="post" id="subscribe">
-                <input type="email"  id="form-control" name="email" placeholder="you@yourself.com" value="">
-                <button type="btn btn-default">Sing Up</button>
-              </form>
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Sign Up</button>
+              </span>
             </div><!-- /input-group -->
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
@@ -66,45 +63,7 @@
   <script src="js/vendor/bootstrap.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script src="jquery.min.js" type="text/javascript">
-    $(document).ready(function() {
-      $('#subscribe').submit(function() {
-        if (!valid_email_address($("#email").val()))
-        {
-          $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');
-        }
-        else
-        {
-              
-          $(".message").html("<span style='color:green;'>Adding your email address...</span>");
-          $.ajax({
-            url: 'subscribe.php', 
-            data: $('#subscribe').serialize(),
-            type: 'POST',
-            success: function(msg) {
-              if(msg=="success")
-              {
-               $("#email").val("");
-               $(".message").html('<span style="color:green;">You have successfully subscribed to our mailing list.</span>');
-                          
-              }
-              else
-              {
-               $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');  
-              }
-            }
-          });
-        }
-   
-        return false;
-      });
-    });
-    function valid_email_address(email)
-    {
-      var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-      return pattern.test(email);
-    }
-  </script>
+
   <script>
   var _gaq=[['_setAccount','UA-36506610-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
