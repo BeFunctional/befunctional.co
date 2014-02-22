@@ -5,4 +5,4 @@
  *  This controls inflatable text.
  * -------------------------------------------
  */
-$('.hook').fitText(0.5); // Turn the compressor down (resizes less aggressively)
+$('.fitText').fitText(1); // Turn the compressor down (resizes less aggressively)

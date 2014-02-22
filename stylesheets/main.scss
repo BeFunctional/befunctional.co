@@ -153,14 +153,18 @@ h1 { font-size: 4em; }
 	background-image: url('../img/hero/banner1.jpg');
 	background-position: center;
 	background-size: cover;
-	padding: 2.5em 0;
+	padding: 2em 0 2.5;
 	color: #fff;
 	text-align: center;
 	margin-bottom: 0;
+	position: relative;
 	h1 { 
 		font-family: 'Great Vibes', serif;
-		font-size: 10em;
+		font-size: 5em;
 		text-shadow: 0 0 0.02em lighten($color-black, 50%);
+	}
+	img[role="logo"] {
+		max-width: 200px;
 	}
 	.fg-desc { 
 		margin-top: 1.5em;
@@ -184,8 +188,10 @@ h1 { font-size: 4em; }
 		 } 
 	}
 }
-@media (max-width: em(400)) {
-	.jumbotron h1 {
+@media (max-width: em(500)) {
+	.jumbotron {
+		h1 {font-size: 3em;}
+		img[role="logo"] { max-width: 120px; }
 	}
 }
 
