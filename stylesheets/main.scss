@@ -246,3 +246,33 @@ h1 { font-size: 4em; }
 
 
 
+
+
+/*
+ * -------------------------------------------
+ *	$_SECTION STYLES
+ *  
+ *  These are global SASS styles used
+ *  throughout the entire stylesheet.
+ * -------------------------------------------
+ */
+
+// Modal Styles
+body.modal-open {margin: 0 !important;}
+.newsletterSignup { padding: 1em; }
+.invalidEmail {
+		position: relative;
+		font-size: 0.75em;
+		background-color: orange;
+		color: #fff;
+		font-family: arial, helvetica, sans-serif;
+	}
+.has-warning .form-control,
+.has-warning .form-control:focus { border: 2px solid orange; }
+.modal-title span { color: #999; }
+.modal-content { background: #eee; }
+.modal-body { background: #fff; }
+.modal-footer { margin-top: 0; }
+
+
+
