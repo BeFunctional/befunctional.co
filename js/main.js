@@ -37,7 +37,6 @@ $(emailValID).keydown(function(event){
 });
 
 $('#newsletterSignupModal').on('shown.bs.modal', function (e) {
-	console.log('Jesus Christ, about fucking time.');
 	$(emailValID).val('');
 	$(emailValID).parent('.input-group').removeClass('has-warning has-feedback');
 	$('.invalidEmail').slideUp().fadeOut();

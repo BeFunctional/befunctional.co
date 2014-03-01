@@ -146,6 +146,13 @@ h1 { font-size: 4em; }
 		color: #fff;
 	}
 }
+.btn-close { 
+	color: #fff;
+	background: #999;
+	&:hover {
+		background: darken(#999, 10%);
+	}
+}
 
 
 
@@ -284,9 +291,36 @@ body.modal-open {margin: 0 !important;}
 .has-warning .form-control,
 .has-warning .form-control:focus { border: 2px solid orange; }
 .modal-title span { color: #999; }
-.modal-content { background: #eee; }
-.modal-body { background: #fff; }
-.modal-footer { margin-top: 0; }
+.modal-content { 
+	background: $color-fg-blue url(../img/modal_bk.jpg) right 67%;
+	background-size: 200%;
+	border-radius: 0;
+	border: 0;
+	color: #eee;
+	padding-bottom: 0;
+	input { color: #eee; background: darken($color-fg-blue,10%); }
+	.btn:focus { color: #fff; }
+}
+.modal-header { 
+	padding: 0.25em 0.5em;
+	border: 0;
+	background-color: rgba(20,20,20,0.8);
+	color: #eee;
+}
+.modal-header .close { margin: 0; color: #fff; opacity: 0.85; }
+.modal-body { 
+	background: transparent;
+	padding-bottom: 0;
+	padding-top: 0.5em;
+}
+.modal-footer { 
+	border: 0;
+	margin-top: 0;
+	border-color: #888;
+	padding: 0.25em 1.25em 1em;
+	text-align: left;
+	#mc-embedded-subscribe { float: right; }
+}
 
 
 
