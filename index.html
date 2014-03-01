@@ -58,18 +58,6 @@
       </div><!-- /.container -->
     </div><!-- /.contentwrap-main -->
 
-    <div class="row newsletterSignup form-group">
-      <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-        <p class="invalidEmail">Please input a valid email address.</p>
-        <div class="input-group">
-          <input type="text" ng-model="userEmail" class="form-control" id="userEmail" placeholder="Enter email">
-          <span class="input-group-btn">
-            <button class="btn btn-default newsletterTrigger" type="button">Sign Up</button>
-          </span>
-        </div><!-- /input-group -->
-      </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-
     <!-- Modal -->
     <div class="modal fade" id="newsletterSignupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -88,11 +76,11 @@
                 </div>
                 <div class="form-group">
                   <label for="mce-FNAME">First Name </label>
-                  <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME">
+                  <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" required>
                 </div>
                 <div class="form-group">
                   <label for="mce-LNAME">Last Name </label>
-                  <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
+                  <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME" required>
                 </div>
                 <div id="mce-responses" class="clear">
                   <div class="response" id="mce-error-response" style="display:none"></div>
