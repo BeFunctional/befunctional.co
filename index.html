@@ -150,14 +150,14 @@
     }
   </script>
   -->
-  <script>
+  <script src="jquery.min.js" type="text/javascript">
     $(document).ready(function(){
             $("#mc-embedded-subscribe-form").submit(function(e){
 
                 $.ajax({
 
-                    url: "../cgi/subscribe.php",
-                    type: "POST",
+                    url: 'subscribe.php',
+                    type: 'POST',
                     data: $(this).serialize(),
 
                     success: function(data){
