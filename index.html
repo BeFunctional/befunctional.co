@@ -109,69 +109,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <!--
-  <script src="jquery.min.js" type="text/javascript">
-    $(document).ready(function() {
-      $('#subscribe').submit(function() {
-        if (!valid_email_address($("#email").val()))
-        {
-          $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');
-        }
-        else
-        {
-              
-          $(".message").html("<span style='color:green;'>Adding your email address...</span>");
-          $.ajax({
-            url: 'subscribe.php', 
-            data: $('#subscribe').serialize(),
-            type: 'POST',
-            success: function(msg) {
-              if(msg=="success")
-              {
-               $("#email").val("");
-               $(".message").html('<span style="color:green;">You have successfully subscribed to our mailing list.</span>');
-                          
-              }
-              else
-              {
-               $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');  
-              }
-            }
-          });
-        }
-   
-        return false;
-      });
-    });
-    function valid_email_address(email)
-    {
-      var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-      return pattern.test(email);
-    }
-  </script>
-  -->
-  <script src="jquery.min.js" type="text/javascript">
-    $(document).ready(function(){
-            $("#mc-embedded-subscribe-form").submit(function(e){
-
-                $.ajax({
-
-                    url: 'subscribe.php',
-                    type: 'POST',
-                    data: $(this).serialize(),
-
-                    success: function(data){
-                        console.log(data);
-                        alert(data);
-                    //  chatWith('9','name');
-                    }
-
-
-                });
-
-            });    
-    });
-  </script>
+  
   <script>
   var _gaq=[['_setAccount','UA-36506610-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

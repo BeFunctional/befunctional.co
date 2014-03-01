@@ -51,12 +51,25 @@ $(".newsletterSignup").find(".input-group-btn .btn").click( function() {
         $('.invalidEmail').finish().slideDown().fadeIn();
     }
 });
-$("#newsletterSignupModal").find("#mc-embedded-subscribe").click( function() {
-  if (!$('#newsletterSignupModal input').val() === '') {
-    alert('success!');
-  } else {
-    alert('Fail!');
-  }
-});
 
+$(document).ready(function(){
+  $("#mc-embedded-subscribe-form").submit(function(e){
+
+    $.ajax({
+
+      url: 'subscribe.php',
+      type: 'POST',
+      data: $(this).serialize(),
+
+      success: function(data){
+        console.log(data);
+        alert(data);
+      //  chatWith('9','name');
+      }
+
+
+    });
+
+  });    
+});
 
