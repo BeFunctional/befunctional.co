@@ -238,7 +238,10 @@ h1 { font-size: 4em; }
  */
 
 // About
-.origin-future { padding: 0em 4em; }
+.origin-future { margin: 1.5em 0; padding: 2em 4em; border: 1px solid #666; border-left: 0; border-right: 0;}
+@media (max-width: em(600)) {
+	.origin-future { padding: 2em 0.25em; }
+}
 .content-about {
 	background-color: #222222; // Old browsers
 	@include gradient(#222222, #081527);
