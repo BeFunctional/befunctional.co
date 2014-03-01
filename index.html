@@ -71,7 +71,7 @@
           <div class="modal-body">
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
-              <form role="form" action="../cgi/subscribe.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <form role="form" action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="form-group">
                   <label for="mce-EMAIL">Email Address </label>
                   <input type="email" value="{{userEmail}}" name="EMAIL" class="required email form-control" id="mce-EMAIL">
@@ -151,9 +151,7 @@
   </script>
   -->
   <script>
-    $(document).ready(function(){   
-
-        //$("#start").click(function(){ // that will a double verivication
+    $(document).ready(function(){
             $("#mc-embedded-subscribe-form").submit(function(e){
 
                 $.ajax({
