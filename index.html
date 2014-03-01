@@ -67,7 +67,7 @@
           <div class="modal-body">
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
-              <form role="form" action="http://functionalgent.us3.list-manage.com/subscribe/post?u=760a966259d3118ffaa22ac85&amp;id=d385783d82" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <form role="form" action="../cgi/subscribe.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="form-group">
                   <label for="mce-EMAIL">Email Address </label>
                   <input type="email" value="{{userEmail}}" name="EMAIL" class="required email form-control" id="mce-EMAIL">
@@ -146,6 +146,30 @@
     }
   </script>
   -->
+  <script>
+    $(document).ready(function(){   
+
+        //$("#start").click(function(){ // that will a double verivication
+            $("#mc-embedded-subscribe-form").submit(function(e){
+
+                $.ajax({
+
+                    url: "../cgi/subscribe.php",
+                    type: "POST",
+                    data: $(this).serialize(),
+
+                    success: function(data){
+                        console.log(data);
+                        alert(data);
+                    //  chatWith('9','name');
+                    }
+
+
+                });
+
+            });    
+    });
+  </script>
   <script>
   var _gaq=[['_setAccount','UA-36506610-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
