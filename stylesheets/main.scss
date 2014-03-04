@@ -145,6 +145,7 @@ h1 { font-size: 4em; }
 		background-color: darken(orange, 10%);
 		color: #fff;
 	}
+	&:focus { color: #fff; }
 }
 .btn-close { 
 	color: #fff;
@@ -280,46 +281,55 @@ h1 { font-size: 4em; }
 
 // Modal Styles
 body.modal-open {margin: 0 !important;}
-.newsletterSignup { padding: 1em; }
 .invalidEmail {
-		position: relative;
-		font-size: 0.75em;
-		background-color: orange;
-		color: #fff;
-		font-family: arial, helvetica, sans-serif;
-	}
+	position: relative;
+	font-size: 0.75em;
+	background-color: orange;
+	color: #fff;
+	font-family: arial, helvetica, sans-serif;
+}
+.modal { padding-top: 5%; }
 .has-warning .form-control,
 .has-warning .form-control:focus { border: 2px solid orange; }
-.modal-title span { color: #999; }
+.modal-title span { color: orange; }
 .modal-content { 
+	text-align: center;
 	background: $color-fg-blue url(../img/modal_bk.jpg) right 67%;
 	background-size: 200%;
 	border-radius: 0;
-	border: 0;
+	border: 1px solid darken(#3dadca, 25%);
 	color: #eee;
-	padding-bottom: 0;
-	input { color: #eee; background: darken($color-fg-blue,10%); }
-	.btn:focus { color: #fff; }
+	padding-bottom: 1em;
+	h1 { margin-bottom: 0.25em; }
+	label { display: block; }
+	input { 
+		padding: 0.5em;
+		color: #eee;
+		background: darken($color-fg-blue,10%);
+		margin-bottom: 1em;
+		width: 100%;
+	}
+	.btn { margin-top: 0.5em; }
+	.btn-close { float: left; }
+	#mc-embedded-subscribe { float: right; }
+}
+.modal-confirmation {
+	display: none;
+	.btn-close { width: 100%; }
 }
 .modal-header { 
-	padding: 0.25em 0.5em;
+	text-align: center;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
 	border: 0;
 	background-color: rgba(20,20,20,0.8);
 	color: #eee;
+	border-bottom: 1px solid darken(#3dadca, 25%);
 }
-.modal-header .close { margin: 0; color: #fff; opacity: 0.85; }
 .modal-body { 
 	background: transparent;
 	padding-bottom: 0;
 	padding-top: 0.5em;
-}
-.modal-footer { 
-	border: 0;
-	margin-top: 0;
-	border-color: #888;
-	padding: 0.25em 1.25em 1em;
-	text-align: left;
-	#mc-embedded-subscribe { float: right; }
 }
 
 

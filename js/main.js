@@ -37,7 +37,7 @@ $(emailValID).keydown(function(event){
 });
 
 $('#newsletterSignupModal').on('shown.bs.modal', function (e) {
-	$(emailValID).val('');
+  $(emailValID).val('');
 	$(emailValID).parent('.input-group').removeClass('has-warning has-feedback');
 	$('.invalidEmail').slideUp().fadeOut();
 });
@@ -45,6 +45,8 @@ $('#newsletterSignupModal').on('shown.bs.modal', function (e) {
 $(".newsletterSignup").find(".input-group-btn .btn").click( function() {
     var emailVal = $(emailValID).val();
     if (emailVal != "" && validateEmail(emailVal)) {
+        $('.modal-confirmation').hide();
+        $('.modal-signup').show();
         $('#newsletterSignupModal').modal('show');
     } else {
         $(emailValID).parent('.input-group').addClass('has-warning has-feedback');
@@ -52,24 +54,7 @@ $(".newsletterSignup").find(".input-group-btn .btn").click( function() {
     }
 });
 
-$(document).ready(function(){
-  $("#mc-embedded-subscribe-form").submit(function(e){
-
-    $.ajax({
-
-      url: 'subscribe.php',
-      type: 'POST',
-      data: $(this).serialize(),
-
-      success: function(data){
-        console.log(data);
-        alert(data);
-      //  chatWith('9','name');
-      }
-
-
-    });
-
-  });    
+$('#mc-embedded-subscribe').click( function() {
+  $('.modal-signup').fadeOut();
+  $('.modal-confirmation').fadeIn();
 });
-
