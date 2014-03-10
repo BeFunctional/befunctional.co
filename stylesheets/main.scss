@@ -279,6 +279,9 @@ h1 { font-size: 4em; }
  * -------------------------------------------
  */
 
+// Footer Styles
+footer { background: $color-neutral-light; }
+
 // Modal Styles
 body.modal-open {margin: 0 !important;}
 .invalidEmail {
