@@ -58,3 +58,31 @@ $('#mc-embedded-subscribe').click( function() {
   $('.modal-signup').fadeOut();
   $('.modal-confirmation').fadeIn();
 });
+
+
+
+
+
+
+
+/*
+ * -------------------------------------------
+ *	$_EMAIL PROCESSING
+ * -------------------------------------------
+ */
+
+// TODO This is still not set up correctly.
+$(function() {
+    $('.error').hide();
+
+    $(".sendEmail").click(function() {
+        // validate and process form
+        $.getJSON( 'http://www.json-generator.com/j/clTuQeeNpe?indent=4', function(data) {
+            $('.feedback-inputWrap').html('').addClass('text-center');
+            for (item in data) {
+                $('.feedback-inputWrap').append('<p>' + data[item].name + '</p>');
+            }
+        } );
+        return false;
+    });
+});
