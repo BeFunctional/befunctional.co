@@ -123,10 +123,10 @@ $browser-context: 16;
 
 // Body
 body { 
-	background-color: $color-purple;
-	@include gradient($color-purple, lighten($color-purple, 5%));
-	font-size: 16px;
-	font-family: $font-stack;
+  background-color: $color-purple;
+  @include gradient(lighten($color-purple, 10%), $color-purple);
+  font-size: 16px;
+  font-family: $font-stack;
 }
 
 // Typography
@@ -136,7 +136,7 @@ h1 { font-size: 4em; }
 
 // Content-Bounding
 .sheet-sitewide {
-	max-width: 1000px;
+	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
 	@include box-shadow(0, 0, 1em, $color-black);
@@ -167,41 +167,41 @@ h1 { font-size: 4em; }
 // Footer Styles
 // TODO Fix mobile presentation at breakpoints.
 // TODO Make padding for footer cap elements more consistent.
-footer { width: 100%; background: $color-fg-blue; }
+footer {
+  width: 100%;
+  background: $color-fg-blue;
+}
 .feedback {
+  padding-top: 4em;
+  padding-bottom: 4em;
   h1 { color: $color-neutral-light; }
-  p { color: $color-neutral-light; line-height: 135%; }
-  .btn { margin-top: 0.75em; background-color: orange; }
+  p { color: darken($color-neutral-light, 15%); line-height: 135%; font-size: 1.5em; }
+  .btn {
+	margin-top: 0.75em;
+	background: orange;
+	&:hover {
+		background: darken(orange, 10%)
+	}
+  }
   .feedback-inputWrap { margin: 2em 0 }
   .feedback-userInput {
 	resize: none;
-	height: em(230);
+	height: em(165);
 	width: 100%;
   }
 }
 .footerCap {
   background: $color-neutral-light;
-  padding-top: 0.5em;
-}
-.copyright {
-  float:left;
-  p { color: #666; font-size: 1em; padding-top: 0.25em; }
-}
-.socialLinks {
-  float:right; text-align: right;
-  a:hover { text-decoration: none; opacity: 0.75; }
-  img { width: 2em; margin-left: 0.25em; }
+  padding: 0.5em 0;
+  .copyright {
+	color: #666;
+	font-size: 0.75em;
+	margin-bottom: 0;
+  }
 }
 
-@media (max-width: 500px) {
-  .footerCap { padding-bottom: 1em; }
-  .copyright, .socialLinks {
-	display: block;
-	float: none;
-	text-align: center;
-	margin-top: 1em;
-  }
-  .socialLinks img { margin-left: 0.25em; margin-right: 0.25em; }
+@media (max-width: em(500)) {
+  .feedback-title, .feedback p { text-align: center; }
 }
 
 
@@ -221,7 +221,7 @@ footer { width: 100%; background: $color-fg-blue; }
 	background-image: url('../img/hero/banner1.jpg');
 	background-position: center;
 	background-size: cover;
-	padding: 2em 0 2.5;
+	padding: 2em 0 4em;
 	color: #fff;
 	text-align: center;
 	margin-bottom: 0;
@@ -236,7 +236,9 @@ footer { width: 100%; background: $color-fg-blue; }
 	}
 	.fg-desc { 
 		margin-top: 1.5em;
-		background-color: $color-fg-blue;
+		background-color: rgba($color-fg-blue, 0.8);
+		color: darken($color-neutral-light, 15%);
+	  	font-weight: 100;
 		@include box-shadow(0, 0, 0.25em, $color-black);
 	}
 	.cta-text { 
@@ -282,19 +284,34 @@ footer { width: 100%; background: $color-fg-blue; }
 	.origin-future { padding: 2em 0.25em; }
 }
 .content-about {
-	background-color: #222222; // Old browsers
-	@include gradient(#222222, #081527);
-	color: $color-neutral-light;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	hr { 
-		margin: 3em auto;
-		border-color: darken($color-neutral-light, 32%);
-		width: 32%;
+  background-color: #222222; // Old browsers
+  @include gradient(#222222, #081527);
+  color: $color-neutral-light;
+  padding-top: 5em;
+  padding-bottom: 3em;
+  .title { color: darken($color-neutral-light, 20%); }
+  p {
+	font-size: 1.25em;
+	color: lighten($color-black, 50%);
+	&.about-conclusion {
+	  color: lighten($color-black, 60%);
+	  margin-top: 1.5em;
+	  font-size: 1.75em;
 	}
-	.about-conclusion { 
-		font-size: 2.75em;
+  }
+  .socialLinks {
+	margin-top: 0.5em;
+	font-size: 3em;
+	a {
+	  color: $color-neutral-light;
+	  margin: 0 0.25em;
+	  &:hover { text-decoration: none; opacity: 0.75; }
 	}
+  }
+}
+
+@media (max-width: em(500)) {
+  .content-about .title { font-size: 3em; }
 }
 
 
