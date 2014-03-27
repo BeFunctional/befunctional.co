@@ -172,6 +172,22 @@ footer {
 .feedback {
   padding-top: 4em;
   padding-bottom: 4em;
+  .error {
+	margin-top: 0.5em;
+	color: $color-fg-blue;
+	background-color: orange;
+	padding: 0.25em;
+	width: 100%;
+  }
+  .messageWrap { margin-top: 1em; }
+  #message {
+	padding: 1em;
+	text-align: center;
+	* { color: $color-fg-blue; }
+	background: lighten($color-fg-blue, 30%);
+	h1 { font-family: $font-stack; font-style: 2em;}
+	.loader { margin-right: 0.5em; }
+  }
   h1 { color: $color-neutral-light; }
   p { color: darken($color-neutral-light, 15%); line-height: 135%; font-size: 1.5em; }
   .btn {
@@ -181,10 +197,15 @@ footer {
 		background: darken(orange, 10%)
 	}
   }
+  label {
+	margin-top: 1em;
+	display: block;
+	text-align: left;
+  }
   .feedback-inputWrap { margin: 2em 0 }
   .feedback-userInput {
 	resize: none;
-	height: em(165);
+	height: em(120);
 	width: 100%;
   }
 }
@@ -198,7 +219,7 @@ footer {
   }
 }
 
-@media (max-width: em(500)) {
+@media (max-width: em(767)) {
   .feedback-title, .feedback p { text-align: center; }
 }
 

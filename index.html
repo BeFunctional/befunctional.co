@@ -27,7 +27,6 @@
 <![endif]-->
 
 <div class="sheet-sitewide">
-
 	<div class="jumbotron clearfix">
 		<img role="logo" src="img/logo.png">
 		<h1 class="hook">Contemporary<br>Refinement</h1>
@@ -74,10 +73,29 @@
 					<h1 class="feedback-title">Contact Us</h1>
 					<p>If you have a question, opportunity, or simply wish to talk, please contact us using this form. Thank you.</p>
 				</div> <!-- /column -->
-				<form class="col-sm-6 col-md-8 feedback-inputWrap">
-					<textarea class="form-control feedback-userInput"></textarea>
-					<button type="button" class="btn btn-lg btn-block ui-element sendEmail">Send</button>
-				</form> <!-- /column -->
+				<div class="col-sm-6 col-md-8 feedback-inputWrap">
+					<form name="contact.php">
+						<div class="row">
+							<div class="col-lg-6">
+								<label for="name" id="name_label" class="label"><span>First and Last Name</span></label>
+								<input type="text" name="name" id="name" value="" class="text-input form-control">
+								<label class="error" for="name" id="name_error" style="display: none; ">This field is required.</label>
+							</div><!-- /.col-lg-6 -->
+							<div class="col-lg-6">
+								<label for="email" id="email_label" class="label"><span>Email Address</span></label>
+								<input type="text" name="email" id="email" value="" class="text-input form-control">
+								<label class="error" for="email" id="email_error" style="display: none; ">This field is required.</label>
+							</div><!-- /.col-lg-6 -->
+						</div>
+						<!-- /.row -->
+						<div class="messageWrap">
+							<label for="comment" id="comment_label" class="label"><span>Your Message</span></label>
+							<textarea type="text" name="comment" id="comment" value="" class="message form-control feedback-userInput"></textarea>
+							<label class="error" for="comment" id="comment_error" style="display: none; ">This field is required.</label>
+							<input type="submit" name="submit" class="button btn btn-lg btn-block ui-element" id="submit_btn" value="Send Message">
+						</div><!-- /.messageWrap -->
+					</form>
+				</div><!-- /column -->
 			</div> <!-- /.feedback -->
 		</div> <!-- /.container -->
 		<div class="footerCap">

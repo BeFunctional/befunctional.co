@@ -15,7 +15,7 @@ $('.fitText').fitText(1); // Turn the compressor down (resizes less aggressively
 
 /*
  * -------------------------------------------
- *	$_EMAIL VALIDATION
+ *	$_NEWSLETTER VALIDATION
  * -------------------------------------------
  */
 
@@ -71,18 +71,52 @@ $('#mc-embedded-subscribe').click( function() {
  * -------------------------------------------
  */
 
-// TODO This is still not set up correctly.
+// Form Validation/Processing
 $(function() {
     $('.error').hide();
 
-    $(".sendEmail").click(function() {
+    $(".button").click(function() {
         // validate and process form
-        $.getJSON( 'http://www.json-generator.com/j/clTuQeeNpe?indent=4', function(data) {
-            $('.feedback-inputWrap').html('').addClass('text-center');
-            for (item in data) {
-                $('.feedback-inputWrap').append('<p>' + data[item].name + '</p>');
+        // first hide any error messages
+        $('.error').hide();
+
+        var name = $("input#name").val();
+        if (name == "") {
+            $("label#name_error").show();
+            $("input#name").focus();
+            return false;
+        }
+        var email = $("input#email").val();
+        if (email == "") {
+            $("label#email_error").show();
+            $("input#email").focus();
+            return false;
+        }
+        var message = $("textarea#comment").val();
+        if (message == "") {
+            $("label#comment_error").show();
+            $("textarea#comment").focus();
+            return false;
+        } else {
+            $('.feedback-inputWrap').html("<div id='message'><img class='loader' src='img/loader.gif'>Message being sent...</div>");
+        }
+
+        var dataString = 'name='+ name + '&email=' + email + '&message=' + message;
+        //alert (dataString);return false;
+
+        $.ajax({
+            type: "POST",
+            url: "contact.php",
+            data: dataString,
+            success: function() {
+                $('#message').html("<h2>Message Submitted!</h2>")
+                    .append("<p>We will be in touch soon.</p>")
+                    .hide()
+                    .fadeIn(1500, function() {
+                        $('#message').append("");
+                    });
             }
-        } );
+        });
         return false;
     });
 });

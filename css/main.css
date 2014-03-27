@@ -118,6 +118,25 @@ footer {
 .feedback {
   padding-top: 4em;
   padding-bottom: 4em; }
+  .feedback .error {
+    margin-top: 0.5em;
+    color: #105c74;
+    background-color: orange;
+    padding: 0.25em;
+    width: 100%; }
+  .feedback .messageWrap {
+    margin-top: 1em; }
+  .feedback #message {
+    padding: 1em;
+    text-align: center;
+    background: #39bbe4; }
+    .feedback #message * {
+      color: #105c74; }
+    .feedback #message h1 {
+      font-family: arial, helvetica, sans-serif;
+      font-style: 2em; }
+    .feedback #message .loader {
+      margin-right: 0.5em; }
   .feedback h1 {
     color: #f0f0f0; }
   .feedback p {
@@ -129,11 +148,15 @@ footer {
     background: orange; }
     .feedback .btn:hover {
       background: #cc8400; }
+  .feedback label {
+    margin-top: 1em;
+    display: block;
+    text-align: left; }
   .feedback .feedback-inputWrap {
     margin: 2em 0; }
   .feedback .feedback-userInput {
     resize: none;
-    height: 10.3125em;
+    height: 7.5em;
     width: 100%; }
 
 .footerCap {
@@ -144,7 +167,7 @@ footer {
     font-size: 0.75em;
     margin-bottom: 0; }
 
-@media (max-width: 31.25em) {
+@media (max-width: 47.9375em) {
   .feedback-title, .feedback p {
     text-align: center; } }
 /*
