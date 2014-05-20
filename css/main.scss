@@ -144,6 +144,14 @@ h1 { font-size: 4em; }
 .contentwrap-main {
   background-color: $color-neutral-light;
 }
+section {
+  padding-top: 5em;
+  padding-bottom: 3em;
+  .title {
+	color: darken($color-neutral-light, 20%);
+	text-align: center;
+  }
+}
 
 // Buttons
 .btn { 
@@ -237,7 +245,7 @@ footer {
 
 .jumbotron {
 	background-color: #000;
-	background-image: url('../img/hero/banner1.jpg');
+	background-image: url('../img/hero/banner2.jpg');
 	background-position: center;
 	background-size: cover;
 	padding: 2em 0 4em;
@@ -251,7 +259,8 @@ footer {
 		text-shadow: 0 0 0.02em lighten($color-black, 50%);
 	}
 	img[role="logo"] {
-		max-width: 200px;
+	  	max-width: em(120);
+	  	padding-left: em(12);
 	}
 	.fg-desc { 
 		margin-top: 1.5em;
@@ -280,7 +289,10 @@ footer {
 @media (max-width: em(500)) {
 	.jumbotron {
 		h1 {font-size: 3em;}
-		img[role="logo"] { max-width: 120px; }
+		img[role="logo"] {
+		  max-width: em(100);
+		  padding-left: em(10);
+		}
 	}
 }
 
@@ -313,9 +325,6 @@ footer {
   background-color: #222222; // Old browsers
   @include gradient(#222222, #081527);
   color: $color-neutral-light;
-  padding-top: 5em;
-  padding-bottom: 3em;
-  .title { color: darken($color-neutral-light, 20%); }
   p {
 	font-size: 1.25em;
 	color: lighten($color-black, 50%);
@@ -339,6 +348,24 @@ footer {
 
 @media (max-width: em(500)) {
   .content-about .title { font-size: 3em; }
+}
+
+// Gallery
+.gallery {
+  background: lighten($color-black, 1%);
+  .event {
+	margin-bottom: 4em;
+	h2 {
+	  color: $color-neutral-light;
+	  text-align: center;
+	  margin-bottom: 0.5em;
+	}
+  }
+  p { color: #999; }
+  .gallery-imgs {
+	margin: 0.25em 0 1em;
+	img { width: 100%; }
+  }
 }
 
 
