@@ -1,196 +1,163 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app=""><!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Functional | A Kansas City Community</title>
-	<meta name="description" content="Functional is a community exploring cultural history and connecting with the passionate individuals pursuing their craft.">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/main.css">
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Welcome to Foundation</h1>
+      </div>
+    </div>
 
-	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
-<body data-responsejs='{
-    "create": [
-        { "prop":"width", "prefix": "min-width-", "lazy":true },
-        { "prop":"width", "prefix":"src", "lazy":true }
-    ]}'
-		>
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+          <p>Once you've exhausted the fun in this document, you should check out:</p>
+          <div class="row">
+            <div class="large-4 medium-4 columns">
+          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+        </div>
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="sheet-sitewide">
-	<div class="jumbotron clearfix">
-		<img role="logo" src="img/functional-logo.png">
-		<h1 class="hook">Welcome to<br>Functional</h1>
-		<p class="fg-desc">Functional is a community promoting modern lifestyles with timeless foundations.</p>
-		<p class="cta-text">Sign up for updates on events and news.</p>
-		<div class="newsletterSignup form-group">
-			<div class="col-xs-12 col-sm-offset-3 col-sm-6">
-				<p class="invalidEmail">Please input a valid email address.</p>
-				<div class="input-group">
-					<input type="text" ng-model="userEmail" class="form-control" id="userEmail" placeholder="Enter email" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <span class="input-group-btn">
-              <button class="btn newsletterTrigger" type="button">Sign Up</button>
-            </span>
-				</div><!-- /input-group -->
-			</div><!-- /.col-lg-6 -->
-		</div><!-- /.row -->
-	</div><!-- /.jumbotron -->
+    <div class="row">
+      <div class="large-8 medium-8 columns">
+        <h5>Here&rsquo;s your basic grid:</h5>
+        <!-- Grid Example -->
 
-	<section class="content-about text-center">
-		<div class="container">
-			<h1 class="title">About Functional</h1>
-			<p>Character and craftsmanship is often overlooked in our fast-paced modern lives. Functional is a community exploring cultural history and connecting with the passionate individuals pursuing their craft who choose quality and character.</p>
-			<p>Our goal is to find that character, craftsmanship, and virtue in tools and products being created today, while also exploring the ideologies associated with what it means to be Functional.</p>
-			<img class="origin-future" src="img/originFuture-invert.png">
-			<p class="about-conclusion">Join us as we explore these concepts and pursue a more functional future.</p>
-			<!-- TODO Change these to the new properties -->
-			<div class="socialLinks">
-				<a href="https://www.facebook.com/livefunctional" target="_blank" title="Official Facebook">
-					<i class="fa fa-facebook"><span>Facebook</span></i>
-				</a>
-				<a href="http://twitter.com/befunctional" target="_blank" title="Official Twitter">
-					<i class="fa fa-twitter"><span>Twitter</span></sp></i>
-				</a>
-				<a href="http://www.eventbrite.com/o/functional-4682031395" target="_blank" title="Our Events">
-					<i class="fa fa-bookmark"><span>Events</span></i>
-				</a>
-			</div> <!-- end column -->
-		</div><!-- /.container -->
-	</section><!-- /.content-about -->
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="callout panel">
+              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+        </div>
 
-	<!--<section class="gallery">
-		<h1 class="title">Past Events</h1>
-		<div class="event container">
-			<h2>
-				Bourbon Night,
-				<time datetime="2013-10-9">October 9th, 2013</time>
-				at the <a href="http://www.theriegerkc.com" target="_blank">Rieger Hotel</a>
-			</h2>
-			<div class="gallery-imgs">
-				<img class="gallery-img rieger-1" src="./img/gallery/bourbon-rieger-1.jpg">
-			</div>&lt;!&ndash; end /.gallery-imgs &ndash;&gt;
-			&lt;!&ndash;<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>&ndash;&gt;
-		</div>&lt;!&ndash; /.event &ndash;&gt;
-		<div class="event container">
-			<h2>
-				Jazz Night,
-				<time datetime="2013-12-3">December 3rd, 2013</time>
-				at the <a href="http://www.greenladylounge.com" target="_blank">Green Lady Lounge</a>
-			</h2>
-			<div class="gallery-imgs">
-				<img class="gallery-img rieger-1" src="./img/gallery/jazz-greenLady-1.jpg">
-			</div>&lt;!&ndash; end /.gallery-imgs &ndash;&gt;
-			&lt;!&ndash;<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>&ndash;&gt;
-		</div>&lt;!&ndash; /.event &ndash;&gt;
-	</section>-->
+        <hr />
 
-	<footer>
-		<div id="feedback" class="container">
-			<div class="feedback clearfix">
-				<div class="col-sm-6 col-md-4">
-					<h1 class="feedback-title">Contact Us</h1>
-					<p>If you have a question, opportunity, or simply wish to talk, please contact us using this form. Thank you.</p>
-				</div> <!-- /column -->
-				<div class="col-sm-6 col-md-8 feedback-inputWrap">
-					<form name="contact.php">
-						<div class="row">
-							<div class="col-lg-6">
-								<label for="name" id="name_label" class="label"><span>First and Last Name</span></label>
-								<input type="text" name="name" id="name" value="" class="text-input form-control">
-								<label class="error" for="name" id="name_error" style="display: none; ">This field is required.</label>
-							</div><!-- /.col-lg-6 -->
-							<div class="col-lg-6">
-								<label for="email" id="email_label" class="label"><span>Email Address</span></label>
-								<input type="text" name="email" id="email" value="" class="text-input form-control">
-								<label class="error" for="email" id="email_error" style="display: none; ">This field is required.</label>
-							</div><!-- /.col-lg-6 -->
-						</div>
-						<!-- /.row -->
-						<div class="messageWrap">
-							<label for="comment" id="comment_label" class="label"><span>Your Message</span></label>
-							<textarea type="text" name="comment" id="comment" value="" class="message form-control feedback-userInput"></textarea>
-							<label class="error" for="comment" id="comment_error" style="display: none; ">This field is required.</label>
-							<input type="submit" name="submit" class="button btn btn-lg btn-block ui-element" id="submit_btn" value="Send Message">
-						</div><!-- /.messageWrap -->
-					</form>
-				</div><!-- /column -->
-			</div> <!-- /.feedback -->
-		</div> <!-- /.container -->
-		<div class="footerCap">
-			<p class="copyright text-center">&copy 2013 - <script>document.write(new Date().getFullYear())</script> Functional. All Rights are Reserved.</p>
-		</div> <!-- /.footercap -->
-	</footer>
+        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+        <form>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-12.columns" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 medium-4 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-4.columns" />
+            </div>
+            <div class="large-4 medium-4 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-4.columns" />
+            </div>
+            <div class="large-4 medium-4 columns">
+              <div class="row collapse">
+                <label>Input Label</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="small-9.columns" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Select Box</label>
+              <select>
+                <option value="husker">Husker</option>
+                <option value="starbuck">Starbuck</option>
+                <option value="hotdog">Hot Dog</option>
+                <option value="apollo">Apollo</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 medium-6 columns">
+              <label>Choose Your Favorite</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+            </div>
+            <div class="large-6 medium-6 columns">
+              <label>Check these out</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Textarea Label</label>
+              <textarea placeholder="small-12.columns"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
 
-	<!-- Modal -->
-	<div class="modal fade" id="newsletterSignupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content clearfix">
-				<div class="modal-header">
-					<h4 class="modal-title" id="myModalLabel">You are currently signing up with: <span>{{userEmail}}</span></h4>
-				</div><!-- /.modal-header -->
-				<div class="modal-body modal-confirmation">
-					<h1>Thank You!</h1>
-					<p>Make sure to check your email and confirm you subscription. You'll be sure to get updates on the latest from Function Gent!</p>
-					<button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
-				</div><!-- /.modal-confirmation -->
-				<div class="modal-body modal-signup">
-					<!-- Begin MailChimp Signup Form -->
-					<div id="mc_embed_signup">
-						<form action="http://functionalgent.us3.list-manage.com/subscribe/post?u=760a966259d3118ffaa22ac85&amp;id=d385783d82" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-							<h1>You're Almost There...</h1>
-							<div class="mc-field-group">
-								<label for="mce-EMAIL">Email Address </label>
-								<input type="email" value="{{userEmail}}" name="EMAIL" class="required email" id="mce-EMAIL">
-							</div>
-							<div class="mc-field-group">
-								<label for="mce-FNAME">First Name </label>
-								<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
-							</div>
-							<div class="mc-field-group">
-								<label for="mce-LNAME">Last Name </label>
-								<input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
-							</div>
-							<div id="mce-responses" class="clear">
-								<div class="response" id="mce-error-response" style="display:none"></div>
-								<div class="response" id="mce-success-response" style="display:none"></div>
-							</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-							<div style="position: absolute; left: -5000px;"><input type="text" name="b_760a966259d3118ffaa22ac85_d385783d82" value=""></div>
-							<button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
-							<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn clear">Subscribe</button>
-						</form>
-					</div><!-- /#mc_embed_signup -->
-				</div><!-- /.modal-body -->
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#newsletterSignupModal -->
+      <div class="large-4 medium-4 columns">
+        <h5>Try one of these buttons:</h5>
+        <p><a href="#" class="small button">Simple Button</a><br/>
+        <a href="#" class="small radius button">Radius Button</a><br/>
+        <a href="#" class="small round button">Round Button</a><br/>
+        <a href="#" class="medium success button">Success Btn</a><br/>
+        <a href="#" class="medium alert button">Alert Btn</a><br/>
+        <a href="#" class="medium secondary button">Secondary Btn</a></p>
+        <div class="panel">
+          <h5>So many components, girl!</h5>
+          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
+          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>
+        </div>
+      </div>
+    </div>
 
-</div><!-- /.sheet-sitewide -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-36506610-1']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-
-		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-</body>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
