@@ -1,3 +1,6 @@
 *.DS_Store
 subscribe.php
 .idea
+bower_components
+npm_modules
+.sass-cache
