@@ -50,3 +50,16 @@
     }
   }
 }
+
+// TODO : Make this a consistent media query.
+@media (max-width: 500px) {
+  .page--home {
+    .home_hero {
+      .hero_intro {
+        .logoWrap {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
