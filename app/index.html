@@ -23,6 +23,7 @@
 
 	  <!-- Page styles -->
     <link rel="stylesheet" href="public/lib/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="public/lib/fontawesome/css/font-awesome.min.css"/>
 	  <link rel="stylesheet" href="styles/main.css">
   </head>
   <body class="page--home">
@@ -37,8 +38,8 @@
           </md-content>
         </md-sidenav>
         <md-content flex class="home_mainContent">
-          <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
-            Navigation Menu
+          <md-button ng-click="toggleLeft()" class="md-primary navButton" hide-gt-md>
+            <i class="fa fa-bars"></i>Navigation
           </md-button>
           <div layout="column" class="home_hero">
             <md-content class="hero_intro md-whiteframe-z1">

@@ -6,6 +6,10 @@
 
 .page--home {
   background: $colorBlueGrey900;
+  .navButton {
+    color: #fff;
+    .fa { margin-right: 0.5rem; }
+  }
   .home_sidenav {
     background: $colorBlueGrey800;
     md-content { background: transparent; }
