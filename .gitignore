@@ -4,3 +4,5 @@ subscribe.php
 bower_components
 npm_modules
 .sass-cache
+dist
+.tmp
