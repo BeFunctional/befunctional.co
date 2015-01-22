@@ -1,0 +1,52 @@
+/**
+*
+* Home page
+*
+**/
+
+.page--home {
+  background: $colorBlueGrey900;
+  .home_sidenav {
+    background: $colorBlueGrey800;
+    md-content { background: transparent; }
+  }
+  .home_mainContent {
+    background: $colorBlueGrey900;
+    color: $colorBlue50;
+  }
+  .home_hero {
+    position: relative;
+    .hero_intro {
+      z-index: 2;
+      border-bottom: 1px solid $colorBlue600;
+      .logoWrap {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        .logoOutline {
+          background: rgba(255,255,255, 0.46);
+          border: 1px solid rgba(255,255,255,0.9);
+          border-radius: 50%;
+        }
+        img {
+          max-height: 8em;
+        }
+        .logotype {
+          font-family: 'Parisienne', "Roboto", Helvetica, sans-serif;
+          font-size: 6em;
+          line-height: 80%;
+        }
+        .tagline {
+          font-size: 1.25em;
+        }
+      }
+    }
+    .hero_newsletter {
+      z-index: 1;
+      background: $colorBlue800;
+    }
+  }
+}

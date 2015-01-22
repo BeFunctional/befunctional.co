@@ -25,32 +25,35 @@
     <link rel="stylesheet" href="public/lib/angular-material/angular-material.min.css"/>
 	  <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body>
+  <body class="page--home">
     <!-- Add your site or app content here -->
     <div ng-controller="AppCtrl" layout="column" layout-fill>
       <section layout="row" flex>
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-          <md-toolbar class="md-theme-indigo">
-            <h1 class="md-toolbar-tools">Sidenav Left</h1>
-          </md-toolbar>
+        <md-sidenav class="home_sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
           <md-content class="md-padding" ng-controller="LeftCtrl">
             <md-button ng-click="close()" class="md-primary" hide-gt-md>
               Close Sidenav Left
             </md-button>
-            <p hide-md show-gt-md>
-              This sidenav is locked open on your device. To go back to the default behavior,
-              narrow your display.
-            </p>
           </md-content>
         </md-sidenav>
-        <md-content flex class="md-padding">
+        <md-content flex class="home_mainContent">
           <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
             Toggle left
           </md-button>
-          <div layout="column" layout-fill layout-align="center center">
-            <p>
-              The left sidenav will 'lock open' on a medium (>=960px wide) device.
-            </p>
+          <div layout="column" class="home_hero">
+            <md-content class="hero_intro md-whiteframe-z1">
+              <img src="images/headerMain.jpg" alt=""/>
+              <div class="logoWrap" layout-fill layout="column" layout-align="center center">
+                <div class="logoOutline md-whiteframe-z1">
+                  <img class="md-whiteframe-z2" src="images/logo_functional_is_trans.png" alt=""/>
+                </div>
+                <span class="logotype">Functional</span>
+                <span class="tagline">Tailored Kansas City Experiences</span>
+              </div>
+            </md-content>
+            <md-content class="md-padding hero_newsletter md-whiteframe-z1 ">
+              This will eventually be a wonderful newsletter signup.
+            </md-content>
           </div>
         </md-content>
       </section>
