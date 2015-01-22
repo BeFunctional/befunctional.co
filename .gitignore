@@ -2,7 +2,7 @@
 subscribe.php
 .idea
 bower_components
-npm_modules
+node_modules
 .sass-cache
 dist
 .tmp

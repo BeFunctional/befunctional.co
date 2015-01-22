@@ -1,0 +1,11 @@
+{
+  "name": "Functional",
+  "version": "2.0.0",
+  "homepage": "http://befunctional.co",
+  "authors": [
+    "Coty Beasley <coty@cotybeasley.name>"
+  ],
+  "description": "The main website for Functional.",
+  "license": "MIT",
+  "private": true
+}
