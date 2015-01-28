@@ -56,14 +56,29 @@
                 <img src="images/headerMain.jpg" alt="Washed Out">
                 <div class="logoWrap" layout-fill layout="column" layout-align="center center">
                   <div class="logoOutline md-whiteframe-z1">
-                    <img class="md-whiteframe-z2" src="images/logo_functional_is_trans.png" alt=""/>
+                    <img src="images/logo_functional_is_trans.png" alt=""/>
                   </div>
                   <span class="logotype">Functional</span>
                   <span class="tagline">Tailored Kansas City Experiences</span>
                 </div>
               </div><!-- /.hero_intro -->
-              <md-card-content class="hero_newsletter">
-                The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+              <md-card-content class="hero_newsletter md-padding">
+                <form name="userForm">
+                  <div layout layout-sm="column">
+                    <md-input-container flex>
+                      <label>First Name</label>
+                      <input ng-model="user.firstName" placeholder="Placeholder text">
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label>Last Name</label>
+                      <input ng-model="theMax">
+                    </md-input-container>
+                  </div>
+                  <md-input-container flex>
+                    <label>Email Address</label>
+                    <input ng-model="user.email" placeholder="Placeholder text">
+                  </md-input-container>
+                </form>
               </md-card-content>
             </md-card>
           </md-content>
@@ -76,6 +91,7 @@
     <script src="public/lib/angular/angular.min.js"></script>
     <script src="public/lib/angular-animate/angular-animate.min.js"></script>
     <script src="public/lib/angular-aria/angular-aria.min.js"></script>
+    <script src="public/lib/angular-messages/angular-messages.min.js"></script>
     <script src="public/lib/angular-material/angular-material.min.js"></script>
     <script src="scripts/app.js"></script>
     <!-- endbuild -->

@@ -3,7 +3,7 @@
 /* ==========================================================================
  $_ANGULAR DEFAULTS ---------------------------------------------------------
  ========================================================================== */
-var app = angular.module('functionalApp', ['ngMaterial']);
+var app = angular.module('functionalApp', ['ngMaterial', 'ngMessages']);
 
 
 
@@ -21,5 +21,10 @@ app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
       .then(function(){
         $log.debug("close LEFT is done");
       });
+  };
+  $scope.user = {
+    email: '',
+    firstName: '',
+    lastName: ''
   };
 }]);
