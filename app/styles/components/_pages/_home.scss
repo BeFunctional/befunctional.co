@@ -13,6 +13,24 @@
   .home_sidenav {
     background: $colorBlueGrey800;
     md-content { background: transparent; }
+    nav .md-button {
+      transition: background 0.35s ease;
+      display: block;
+      text-align: left;
+      text-decoration: none;
+      color: $colorBlueGrey50;
+      font-size: 1.25rem;
+      line-height: 150%;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      .fa { margin-right: 0.75rem; }
+      &:first-child {
+        margin-top: 0;
+      }
+      &:hover {
+        background: darken($colorBlueGrey800, 20%);
+      }
+    }
   }
   .home_mainContent {
     background: $colorBlueGrey900;
