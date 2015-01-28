@@ -7,6 +7,7 @@
 .page--home {
   background: $colorBlueGrey900;
   .button_nav, .button_close {
+    color: $colorLightBlue300;
     .fa { margin-right: 0.5rem; }
   }
   .home_sidenav {
@@ -42,7 +43,7 @@
     .hero_intro {
       position: relative;
       z-index: 2;
-      border-bottom: 1px solid $colorBlue600;
+      // border-bottom: 1px solid $colorBlue600;
       overflow: hidden;
       .logoWrap {
         position: absolute;
@@ -75,7 +76,37 @@
       padding: 1rem;
       display: block;
       z-index: 1;
-      background: $colorBlue800;
+      background: $colorGrayLight;
+      header {
+        margin-bottom: 1rem;
+        h1, p {
+          margin: 0;
+          padding: 0;
+        }
+        h1 {
+          font-size: 2.125rem;
+          line-height: 150%;
+        }
+        p {
+          color: $colorBlueGrey300;
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+      }
+      md-divider {
+        border-color: $colorBlueGrey900;
+      }
+      md-input-container {
+        input {
+          color: $colorYellow500;
+        }
+        .md-placeholder {
+          color: $colorBlueGrey700;
+        }
+        &.md-input-focused .md-input {
+          border-color: $colorLightBlue300;
+        }
+      }
     }
   }
 }

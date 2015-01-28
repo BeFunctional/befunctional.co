@@ -34,7 +34,7 @@
                     class="md-sidenav-left md-whiteframe-z2 home_sidenav"
                     md-component-id="left"
                     md-is-locked-open="$media('gt-md')">
-          <md-button ng-click="close()" class="md-primary button_close" hide-gt-md>
+          <md-button ng-click="close()" class="button_close" hide-gt-md>
             <i class="fa fa-times-circle"></i>Close
           </md-button>
           <nav>
@@ -48,7 +48,7 @@
         </md-sidenav>
         <md-content layout="column" flex class="home_mainContent md-dark-theme">
           <md-content class="md-dark-theme">
-            <md-button ng-click="toggleSidenav('left')" class="md-primary button_nav" hide-gt-md>
+            <md-button ng-click="toggleSidenav('left')" class="button_nav" hide-gt-md>
               <i class="fa fa-bars"></i>Navigation
             </md-button>
             <md-card class="home_hero">
@@ -63,21 +63,25 @@
                 </div>
               </div><!-- /.hero_intro -->
               <md-card-content class="hero_newsletter md-padding">
-                <form name="userForm">
+                <header class="centered">
+                  <h1>Newsletter Signup</h1>
+                  <p>Sign up for updates on events and news.</p>
+                </header>
+                <form name="userForm" md-theme="docs-dark">
                   <div layout layout-sm="column">
                     <md-input-container flex>
                       <label>First Name</label>
-                      <input ng-model="user.firstName" placeholder="Placeholder text">
+                      <input ng-model="user.firstName" placeholder="Your first name">
                     </md-input-container>
                     <md-input-container flex>
                       <label>Last Name</label>
-                      <input ng-model="theMax">
+                      <input ng-model="user.lastName" placeholder="Your last name">
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label>Email Address</label>
+                      <input ng-model="user.email" placeholder="Your email">
                     </md-input-container>
                   </div>
-                  <md-input-container flex>
-                    <label>Email Address</label>
-                    <input ng-model="user.email" placeholder="Placeholder text">
-                  </md-input-container>
                 </form>
               </md-card-content>
             </md-card>
