@@ -34,8 +34,8 @@
                     class="md-sidenav-left md-whiteframe-z2 home_sidenav"
                     md-component-id="left"
                     md-is-locked-open="$media('gt-md')">
-          <md-button ng-click="close()" class="md-primary" hide-gt-md>
-            Close Sidenav Left
+          <md-button ng-click="close()" class="md-primary button_close" hide-gt-md>
+            <i class="fa fa-times-circle"></i>Close
           </md-button>
           <nav>
             <md-button href="#"><i class="fa fa-home"></i>Intro</md-button>
@@ -48,7 +48,7 @@
         </md-sidenav>
         <div layout="column" flex>
           <md-content layout="column" flex class="home_mainContent">
-            <md-button ng-click="toggleSidenav('left')" class="md-primary navButton" hide-gt-md>
+            <md-button ng-click="toggleSidenav('left')" class="md-primary button_nav" hide-gt-md>
               <i class="fa fa-bars"></i>Navigation
             </md-button>
             <div layout="column" class="home_hero">

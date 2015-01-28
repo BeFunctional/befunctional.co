@@ -6,13 +6,16 @@
 
 .page--home {
   background: $colorBlueGrey900;
-  .navButton {
-    color: #fff;
+  .button_nav, .button_close {
     .fa { margin-right: 0.5rem; }
   }
   .home_sidenav {
     background: $colorBlueGrey800;
     md-content { background: transparent; }
+    .button_close {
+      background: $colorBlueGrey900;
+      border-bottom: 1px solid $colorBlueGrey700;
+    }
     nav .md-button {
       transition: background 0.35s ease;
       display: block;
