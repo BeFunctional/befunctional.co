@@ -21,12 +21,9 @@
       color: $colorBlueGrey50;
       font-size: 1.25rem;
       line-height: 150%;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 2rem;
       margin-top: 0.5rem;
       .fa { margin-right: 0.75rem; }
-      &:first-child {
-        margin-top: 0;
-      }
       &:hover {
         background: darken($colorBlueGrey800, 20%);
       }

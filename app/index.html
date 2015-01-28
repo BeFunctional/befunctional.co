@@ -26,46 +26,49 @@
     <link rel="stylesheet" href="public/lib/fontawesome/css/font-awesome.min.css"/>
 	  <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body class="page--home">
+  <body class="page--home" layout="column" ng-controller="AppCtrl">
     <!-- Add your site or app content here -->
     <div ng-controller="AppCtrl" layout="column" layout-fill>
-      <section layout="row" flex>
-        <md-sidenav class="home_sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-          <md-content class="md-padding" ng-controller="LeftCtrl">
-            <md-button ng-click="close()" class="md-primary" hide-gt-md>
-              Close Sidenav Left
-            </md-button>
-            <nav>
-              <md-button href="#"><i class="fa fa-home"></i>Intro</md-button>
-              <md-button href="#"><i class="fa fa-newspaper-o"></i>Newsletter</md-button>
-              <md-button href="#"><i class="fa fa-calendar"></i>Upcoming Events</md-button>
-              <md-button href="#"><i class="fa fa-archive"></i>Past Events</md-button>
-              <md-button href="#"><i class="fa fa-info-circle"></i>About Functional</md-button>
-              <md-button href="#"><i class="fa fa-comment"></i>Contact Us</md-button>
-            </nav>
-          </md-content>
-        </md-sidenav>
-        <md-content flex class="home_mainContent">
-          <md-button ng-click="toggleLeft()" class="md-primary navButton" hide-gt-md>
-            <i class="fa fa-bars"></i>Navigation
+      <div layout="row" flex>
+        <md-sidenav layout="column"
+                    class="md-sidenav-left md-whiteframe-z2 home_sidenav"
+                    md-component-id="left"
+                    md-is-locked-open="$media('gt-md')">
+          <md-button ng-click="close()" class="md-primary" hide-gt-md>
+            Close Sidenav Left
           </md-button>
-          <div layout="column" class="home_hero">
-            <md-content class="hero_intro md-whiteframe-z1">
-              <img src="images/headerMain.jpg" alt=""/>
-              <div class="logoWrap" layout-fill layout="column" layout-align="center center">
-                <div class="logoOutline md-whiteframe-z1">
-                  <img class="md-whiteframe-z2" src="images/logo_functional_is_trans.png" alt=""/>
+          <nav>
+            <md-button href="#"><i class="fa fa-home"></i>Intro</md-button>
+            <md-button href="#"><i class="fa fa-newspaper-o"></i>Newsletter</md-button>
+            <md-button href="#"><i class="fa fa-calendar"></i>Upcoming Events</md-button>
+            <md-button href="#"><i class="fa fa-archive"></i>Past Events</md-button>
+            <md-button href="#"><i class="fa fa-info-circle"></i>About Functional</md-button>
+            <md-button href="#"><i class="fa fa-comment"></i>Contact Us</md-button>
+          </nav>
+        </md-sidenav>
+        <div layout="column" flex>
+          <md-content layout="column" flex class="home_mainContent">
+            <button ng-click="toggleSidenav('left')" hide-gt-md class="menuBtn">
+              <span class="visuallyhidden">Menu</span>
+            </button>
+            <div layout="column" class="home_hero">
+              <md-content class="hero_intro md-whiteframe-z1">
+                <img src="images/headerMain.jpg" alt=""/>
+                <div class="logoWrap" layout-fill layout="column" layout-align="center center">
+                  <div class="logoOutline md-whiteframe-z1">
+                    <img class="md-whiteframe-z2" src="images/logo_functional_is_trans.png" alt=""/>
+                  </div>
+                  <span class="logotype">Functional</span>
+                  <span class="tagline">Tailored Kansas City Experiences</span>
                 </div>
-                <span class="logotype">Functional</span>
-                <span class="tagline">Tailored Kansas City Experiences</span>
-              </div>
-            </md-content>
-            <md-content class="md-padding hero_newsletter md-whiteframe-z1 ">
-              This will eventually be a wonderful newsletter signup.
-            </md-content>
-          </div>
-        </md-content>
-      </section>
+              </md-content>
+              <md-content class="md-padding hero_newsletter md-whiteframe-z1 ">
+                This will eventually be a wonderful newsletter signup.
+              </md-content>
+            </div>
+          </md-content>
+        </div>
+      </div>
     </div>
 
     <!-- build:js scripts/main.min.js -->
