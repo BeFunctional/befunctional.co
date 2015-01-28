@@ -46,14 +46,11 @@
             <md-button href="#"><i class="fa fa-comment"></i>Contact Us</md-button>
           </nav>
         </md-sidenav>
-        <div layout="column" flex>
-          <md-content layout="column" flex class="home_mainContent">
-            <md-button ng-click="toggleSidenav('left')" class="md-primary button_nav" hide-gt-md>
-              <i class="fa fa-bars"></i>Navigation
-            </md-button>
-            <div layout="column" class="home_hero">
-              <md-content class="hero_intro md-whiteframe-z1">
-                <img src="images/headerMain.jpg" alt=""/>
+        <md-content layout="column" flex class="home_mainContent md-dark-theme">
+          <md-content class="md-dark-theme">
+            <md-card class="home_hero">
+              <div class="hero_intro md-whiteframe-z1">
+                <img src="images/headerMain.jpg" alt="Washed Out">
                 <div class="logoWrap" layout-fill layout="column" layout-align="center center">
                   <div class="logoOutline md-whiteframe-z1">
                     <img class="md-whiteframe-z2" src="images/logo_functional_is_trans.png" alt=""/>
@@ -61,13 +58,13 @@
                   <span class="logotype">Functional</span>
                   <span class="tagline">Tailored Kansas City Experiences</span>
                 </div>
-              </md-content>
-              <md-content class="md-padding hero_newsletter md-whiteframe-z1 ">
-                This will eventually be a wonderful newsletter signup.
-              </md-content>
-            </div>
+              </div><!-- /.hero_intro -->
+              <md-card-content class="hero_newsletter">
+                The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+              </md-card-content>
+            </md-card>
           </md-content>
-        </div>
+        </md-content>
       </div>
     </div>
 
